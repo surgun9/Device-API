@@ -1,0 +1,25 @@
+api_browser_version_get:
+    pattern:  /browser_versions1/{browserVersionId}
+    defaults: { _controller: AppBundle:ApiBrowserVersion:get, browserVersionId: null, _format: ~ }
+    methods: [GET]
+    requirements:
+        browserVersionId: "\d+"
+
+api_browser_version_create:
+    pattern:  /browser_versions
+    defaults: { _controller: AppBundle:ApiBrowserVersion:create, _format: ~ }
+    methods: [POST]
+
+api_browser_version_update:
+    pattern:  /browser_versions/{browserVersionId}
+    defaults: { _controller: AppBundle:ApiBrowserVersion:update, _format: ~ }
+    methods: [PUT]
+    requirements:
+            browserVersionId: "\d+"
+
+api_browser_version_delete:
+    pattern:  /browser_versions/{browserVersionId}
+    defaults: { _controller: AppBundle:ApiBrowserVersion:delete, _format: ~ }
+    methods: [DELETE]
+    requirements:
+            browserVersionId: "\d+"

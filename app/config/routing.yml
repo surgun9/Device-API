@@ -1,0 +1,14 @@
+api_device:
+    type:   rest
+    prefix: /api
+    resource: "@AppBundle/Resources/config/routing/device.yml"
+
+api_browser:
+    type:   rest
+    prefix: /api
+    resource: "@AppBundle/Resources/config/routing/browser.yml"
+
+api_browser_version:
+    type:   rest
+    prefix: /api
+    resource: "@AppBundle/Resources/config/routing/browser_version.yml"

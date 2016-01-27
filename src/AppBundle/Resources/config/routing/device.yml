@@ -1,0 +1,6 @@
+api_device:
+    pattern:  /devices/{deviceId}
+    defaults: { _controller: AppBundle:ApiDevice:getDevices, deviceId: null, _format: ~ }
+    requirements:
+        methods: GET
+        deviceId: "\d+"

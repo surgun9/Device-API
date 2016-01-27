@@ -1,0 +1,6 @@
+api_browser:
+    pattern:  /browsers/{browserId}
+    defaults: { _controller: AppBundle:ApiBrowser:getBrowsers, browserId: null, _format: ~ }
+    requirements:
+        methods: GET
+        browserId: "\d+"
