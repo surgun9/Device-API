@@ -66,7 +66,8 @@ class ApiBrowserVersionController extends FOSRestController
         $responseCode = 403;
         if ($browserVersion instanceof BrowserVersion) {
             try {
-                $this->processForm($request, $browserVersion, 'POST');
+//                var_dump($request->get('version')); die;
+                $browserVersion = $this->processForm($request, $browserVersion);
                 $em->merge($browserVersion);
                 $em->flush();
 

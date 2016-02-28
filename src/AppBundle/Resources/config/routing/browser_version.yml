@@ -1,5 +1,5 @@
 api_browser_version_get:
-    pattern:  /browser_versions1/{browserVersionId}
+    pattern:  /browser_versions/{browserVersionId}
     defaults: { _controller: AppBundle:ApiBrowserVersion:get, browserVersionId: null, _format: ~ }
     methods: [GET]
     requirements:
